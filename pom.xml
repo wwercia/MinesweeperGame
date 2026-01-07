@@ -51,6 +51,20 @@
                     <target>19</target>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.example.sapergame.App</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -60,7 +74,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.sapergame/com.example.sapergame.HelloApplication</mainClass>
+                            <mainClass>com.example.sapergame.App</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
